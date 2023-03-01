@@ -13,6 +13,7 @@ public class Solution503 {
             if(nums[i%len]<=nums[stack.peek()]){
                 stack.push(i%len);
             }
+
             else {
                 while (!stack.empty()&&nums[i%len]>nums[stack.peek()]){
                     result[stack.peek()] = nums[i%len];
